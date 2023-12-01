@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lùi Xinh Đẹp</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Swiper CSS -->
+    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css" /> -->
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <!-- <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> -->
+
+</head>
+
+<body ng-app="myapp">
+  <header class="sticky-md-top">
+    <div class="bg-light">
+      <p class="text-center fw-bold font-monospace pt-2 m-0" style="size: 14px">
+        FREESHIP ĐƠN HÀNG TRÊN 500K
+      </p>
+    </div>
+    <div class="bg-dark" data-bs-theme="dark">
+      <div id="mid" class="row me-3 ms-3">
+        <div class="col-lg-2 col-sm-4 p-3">
+          <img
+            src="./img/logo.webp"
+            class="mx-auto d-block img-fluid"
+            width="180"
+            alt=""
+          />
+        </div>
+        <div class="col-lg-6 col-sm-4 p-3">
+          <div class="input-group rounded">
+            <input type="text" class="form-control rounded" placeholder="Tìm Kiếm tên sản phẩm" ng-model="searchText" />  
+            <a href="#!search"  class="btn btn-dark">TÌM KIẾM</a>
+        </div>
+        </div>
+        <div class="col-lg-4 col-sm-4 p-2">
+          <ul class="nav nav-pills nav-justified nav-right">
+            <li class="nav-item dropdown">
+              <a class="nav-link active bg-dark" data-bs-toggle="dropdown" href="#"
+                ><i class="uil uil-location-pin-alt"></i>
+                <i class="d-none d-lg-block text-n">Hệ thống cửa hàng</i></a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active bg-dark" data-bs-toggle="dropdown" href="#"
+                ><i class="uil uil-user"></i>
+                <i class="d-none d-lg-block text-n">Tài khoản của bạn</i></a
+              >
+              <div class="dropdown-menu" style="width: 500px">
+                <form class="px-4 py-3">
+                  <!-- Email input -->
+                  <div class="form-outline mb-4">
+                    <input type="email" id="form2Example1" class="form-control" />
+                    <label class="form-label" for="form2Example1"
+                      >Email address</label
+                    >
+                  </div>
+    
+                  <!-- Password input -->
+                  <div class="form-outline mb-4">
+                    <input
+                      type="password"
+                      id="form2Example2"
+                      class="form-control"
+                    />
+                    <label class="form-label" for="form2Example2">Password</label>
+                  </div>
+    
+                  <!-- 2 column grid layout for inline styling -->
+                  <div class="row mb-4">
+                    <div class="col d-flex justify-content-center">
+                      <!-- Checkbox -->
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="form2Example3"
+                          checked
+                        />
+                        <label class="form-check-label" for="form2Example3">
+                          Remember me
+                        </label>
+                      </div>
+                    </div>
+    
+                    <div class="col">
+                      <!-- Simple link -->
+                      <a href="#!">Forgot password?</a>
+                    </div>
+                  </div>
+                  <!-- Submit button -->
+                  <button type="submit" class="btn btn-dark btn-block">
+                    Sign in
+                  </button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">New around here? Sign up</a>
+                <a class="dropdown-item" href="#">Forgot password?</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active bg-dark" href="#!cart"
+                ><i class="uil uil-shopping-cart-alt"
+                  ><span class="badge rounded-pill badge-notification bg-danger"
+                    >{{cart.length}}</span
+                  ></i
+                >
+                <i class="d-none d-lg-block text-n"> Giỏ hàng</i></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bg-light row">
+      <div class="col-lg-3"></div>
+      <nav
+        class="navbar navbar-expand-lg justify-content-center bg-body-tertiary col-lg-6"
+      >
+        <div class="container-fluid navbar-bottom">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >NEW ARRIVALS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >SALE UP TO 70%</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  SẢN PHẨM
+                </a>
+                <ul class="dropdown-menu text-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >ITEM THU ĐÔNG - FALL/WINTER SS22</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">TẤT CẢ SẢN PHẨM</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >HÀNG BÁN CHẠY - BEST SELLER</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">SALE OF 50%</a></li>
+                  <li><a class="dropdown-item" href="#">ÁO</a></li>
+                  <li><a class="dropdown-item" href="#">QUẦN</a></li>
+                  <li><a class="dropdown-item" href="#">ĐỒ LÓT</a></li>
+                  <li><a class="dropdown-item" href="#">QUẦN ÁO THỂ THAO</a></li>
+                  <li><a class="dropdown-item" href="#">BALO - TÚI XÁCH</a></li>
+                  <li><a class="dropdown-item" href="#">GIÀY DÉP</a></li>
+                  <li><a class="dropdown-item" href="#">NÓN</a></li>
+                  <li><a class="dropdown-item" href="#">VỚ</a></li>
+                  <li><a class="dropdown-item" href="#">THẮT LUNG</a></li>
+                  <li><a class="dropdown-item" href="#">VÍ</a></li>
+                  <li><a class="dropdown-item" href="#">MẮT KÍNH</a></li>
+                  <li><a class="dropdown-item" href="#">PHỤ KIỆN KHÁC</a></li>
+                  <li><a class="dropdown-item" href="#">SET ÁO QUẦN</a></li>
+                  <li><a class="dropdown-item" href="#">SET ÁO VEST</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  BỘ SƯU TẬP
+                </a>
+                <ul class="dropdown-menu text-menu">
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >VÌ SẾP ANH BẮT CHẠY DEADLINE || PARODY #VMABCT</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >KHÓ || FATHER'S DAY SPECIAL STORY</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">HẸN - THE FIRST STORY</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >ĐƯỜNG ĐUA - YEAR END COLLECTION</a
+                    >
+                  </li>
+                </ul>
+              </li>
+    
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  HƯỚNG DẪN - CHÍNH SÁCH
+                </a>
+                <ul class="dropdown-menu text-menu">
+                  <li><a class="dropdown-item" href="#">HƯỚNG DẪN CHỌN SIZE</a></li>
+                  <li><a class="dropdown-item" href="#">CHÍNH SÁCH ĐỔI TRẢ</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >CHƯƠNG TRÌNH ƯU ĐÃI SINH NHẬT</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">HƯỚNG DẪN ĐẶT HÀNG</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">CHÍNH SÁCH KHÁCH HÀNG</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">CHÍNH SÁCH BẢO MẬT</a></li>
+                  <li><a class="dropdown-item" href="#">TÀI KHOẢN NGÂN HÀNG</a></li>
+                  <li><a class="dropdown-item" href="#">KIỂM TRA ĐƠN HÀNG</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >KIỂM TRA SẢN PHẨM TẠI CHI NHÁNH</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">QUY ĐỊNH CHUNG </a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">ĐỊA CHỈ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >GIỚI THIỆU</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">NEWS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
+  </header>
+  <main class="container">
+    <div class="row">
+      <div>
+        <ng-view></ng-view>
+      </div>
+    </div>
+  </main>
+  <footer ng-include="'footer.html'">
+  </footer>  
+   <!-- angularjs -->
+   <script>
+    var app=angular.module("myapp",["ngRoute"]);
+    app.controller("myCtrl",function($scope, $rootScope, $routeParams, $http){
+      $scope.products=[];
+      $http.get("static/products.json").then(function(response){
+          $scope.products=response.data;
+        });
+      $scope.slider1=[
+        {
+          Image1: "img/slitop1.webp",
+          Image2: "img/slitop2.webp"
+        }
+       ];
+          //  ......... 
+      $scope.index=$routeParams.url
+        // chọn size 
+      $scope.selectedSize = 'S';
+  
+      $scope.selectSize = function(size) {
+      $scope.selectedSize = size;
+      }; 
+      // ..............
+
+      // Giỏ hàng
+      $scope.addCart=function(p){
+                if(typeof $rootScope.cart=='undefined'){
+                $rootScope.cart=[];
+                };
+                $scope.countCart=$rootScope.cart.length;
+                if($rootScope.cart.filter(i => i.id == p.id).length==0){
+                    $rootScope.cart.push(p);
+                    $rootScope.cart[$scope.countCart].quantity=1;       
+                }   
+            }
+      $rootScope.sumMoney=0;
+            if(typeof $rootScope.cart!='undefined'){
+                for(var i=0; i<$rootScope.cart.length;i++){
+                    $rootScope.sumMoney=$rootScope.sumMoney+$rootScope.cart[i].quantity*$rootScope.cart[i].money;
+                 }
+        } 
+      $scope.addClick=function(index){
+                $rootScope.cart[index].quantity= $rootScope.cart[index].quantity+1;
+                if(typeof $rootScope.cart!='undefined'){
+                    $rootScope.sumMoney=0;
+                    for(var i=0; i<$rootScope.cart.length;i++){
+                    $rootScope.sumMoney=$rootScope.sumMoney+$rootScope.cart[i].quantity*$rootScope.cart[i].money;
+                 }
+            }
+            }
+      $scope.subClick=function(index){
+                if($rootScope.cart[index].quantity>0){
+                $rootScope.cart[index].quantity= $rootScope.cart[index].quantity-1;
+                }
+                if(typeof $rootScope.cart!='undefined'){
+                    $rootScope.sumMoney=0;
+                    for(var i=0; i<$rootScope.cart.length;i++){
+                    $rootScope.sumMoney=$rootScope.sumMoney+$rootScope.cart[i].quantity*$rootScope.cart[i].money;
+                 }
+            }
+          }
+      $scope.delProduct=function(index){
+                $rootScope.cart.splice(index,1);
+                if(typeof $rootScope.cart!='undefined'){
+                    $rootScope.sumMoney=0;
+                    for(var i=0; i<$rootScope.cart.length;i++){
+                    $rootScope.sumMoney=$rootScope.sumMoney+$rootScope.cart[i].quantity*$rootScope.cart[i].Price;
+                 }
+            }
+            }
+      // thanh toán
+      $scope.payProduct=function(index){
+                $rootScope.cart.splice(index);
+                if(typeof $rootScope.cart!='undefined'){
+                    $rootScope.sumMoney=0;
+                    for(var i=0; i<$rootScope.cart.length;i++){
+                    $rootScope.sumMoney=$rootScope.sumMoney+$rootScope.cart[i].quantity*$rootScope.cart[i].Price;
+                 }
+            }
+            }            
+      //search
+      
+      // ..............................
+      $scope.arrange=0;
+        $scope.myFuncArrange1 = function() {
+          $scope.arrange = 1;
+        }
+        $scope.myFuncArrange2 = function() {
+          $scope.arrange = 2;
+        }
+        $scope.index=$routeParams.url;
+        $scope.showMe = false;
+        $scope.hidenMe = true;
+        $scope.myFuncShow = function() {
+        $scope.showMe = !$scope.showMe;
+        $scope.hidenMe = !$scope.hidenMe;
+        }
+        $scope.myFuncHiden = function() {
+        $scope.showMe = false;
+        $scope.hidenMe = true;
+        }
+
+    });
+    app.config(function($routeProvider){
+        $routeProvider
+        .when("/detail/:url",{
+            templateUrl: "detail-product.html?" + Math.random(),
+            controller: "myCtrl"
+        })
+        .when("/cart",{
+              templateUrl: "cart-products.html?" + Math.random(),
+              controller:  "myCtrl"   
+        })
+        .when("/search", {
+              templateUrl: "searchPage.html?" + Math.random(),
+              controller: "myCtrl"
+                })
+        .otherwise({
+            templateUrl: "list-product.html",
+            controller:  "myCtrl"   
+        })
+    });
+   
+  </script>
+  
+  
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <!-- Popper JS -->
+  <script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+
+  <!-- <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script> -->
+</body>
+
+</html>

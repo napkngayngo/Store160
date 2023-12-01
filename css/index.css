@@ -1,0 +1,140 @@
+/* slider----2  */
+.bg-slider {
+  background: #831C1E;
+  border-radius: 4px;
+}
+
+.card-carousel {
+  border: none;
+  border-radius: 3px;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+}
+
+.carousel-inner {
+  padding: 1em;
+}
+
+.carousel-cotrol-prev ,.carousel-cotrol-next {
+  background-color: #e1e1e1;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-cotrol-next span,
+.carousel-cotrol-prev span {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media screen and (min-width: 568px ) {
+.cards-wrapper {
+  display: flex;
+} 
+.card-carousel {
+  margin: 0 .5em;
+  width: calc(100%/4);
+}
+
+.image-wrapper {
+  /* height: 22vw; */
+  margin: 0 auto;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+}
+@media screen and (max-width: 567px ) {
+  .card-carousel:not(:first-child){
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px ) {
+  .card-text {
+    font-size: 10px;
+  }
+}
+
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.price-sale {
+  color: red;
+}
+
+
+/* ---------------------------  */
+
+.text-n, .text-menu, .navbar-bottom {
+  font-size: 10px;
+}
+
+.title-footer {
+  font-weight: 600;
+  color: #fff;
+  padding-left: 15px;
+}
+
+.text-footer a:hover {
+  color: #DC3545;
+}
+
+.text-content, .fp{
+  padding-left: 15px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+/* ///////////////  */
+.center {
+  text-align: center;
+}
+
+.hero-btn {
+  width: 200px;
+  margin-top: 5px;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #820F0D;
+  padding: 12px 34px;
+  font-size: 15px;
+  background: #820F0D;
+  position: relative;
+  cursor: pointer; /* con trỏ*/
+}
+
+.hero-btn:hover {
+  border: 1px solid #820F0D;
+  background: transparent;
+  transition: 1s;
+}
+
+.btn-sale{
+  color: #fff;
+  background: #820F0D;
+  border: none;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+
+.btn-sale2 {
+  padding: 5px 10px;
+  border: 1px solid #e1e1e1;
+  font-weight: 500;
+  background: #fff;
+  color: #820F0D;
+}
+
+.btn-sale2:hover {
+  border: 1px solid #820F0D;
+  background: transparent;
+  transition: 1s;
+}
+

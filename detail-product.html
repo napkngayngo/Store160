@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Lùi Xinh Đẹp</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script> -->
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- Swiper CSS -->
+    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css" /> -->
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <!-- <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"> -->
+</head>
+
+<body>
+  <header>
+    <!-- place navbar here -->
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 image-wrapper mt-2 col-md-6">
+          <a href="">
+            <img class="rounded float-start" src="{{products[index].Image}}" alt="">
+          </a>
+        </div>
+        <div class="ms-2 col-lg-7 col-md-6">
+          <div>
+            <div>
+              <h4>Tên sản phẩm : {{products[index].name}}</h4>
+            </div>
+            <div class="badge bg-success text-wrap" style="width: 6rem;">
+              {{products[index].status}}
+            </div>
+          </div>
+          <p>Loại: {{products[index].type}} </p>
+          <p>Giá : {{products[index].Price}}</p>
+          <hr>
+          <div>
+            Mô Tả : <br>
+            {{products[index].name}}
+            {{products[index].describe}}
+          </div>
+          <hr>
+          <div class="row">
+            <div class="me-2 col-lg-5 col-sm-12">
+              <span class="">Bảng chọn size</span> <br>
+              <p class="fw-bold">Kích thước: {{selectedSize}}</p>
+              <button class="btn btn-outline-dark mt-2" ng-class="{active: selectedSize=='S'}" ng-click="selectSize('S')">S</button>
+              <button class="btn btn-outline-dark mt-2" ng-class="{active: selectedSize=='M'}" ng-click="selectSize('M')">M</button>
+              <button class="btn btn-outline-dark mt-2" ng-class="{active: selectedSize=='L'}" ng-click="selectSize('L')">L</button>
+              <button class="btn btn-outline-dark mt-2" ng-class="{active: selectedSize=='XL'}" ng-click="selectSize('XL')">XL</button>
+              <button class="btn btn-outline-dark mt-2" ng-class="{active: selectedSize=='XXL'}" ng-click="selectSize('XXL')">XXL</button>
+            </div>
+            <div class="mt-3 col-lg-7 col-sm-12">
+              <button class="btn btn-outline-dark"><a ng-click="addCart(products[index])" href="" class="nav-link">Thêm Vào Giỏ</a></button>
+              <button class="btn btn-outline-dark"><a ng-click="addCart(products[index])" href="#!cart" class="nav-link">Mua ngay</a></button>
+              <button class="btn btn-dark mt-2"><a href="#" class="nav-link">Mua sản phẩm khác</a></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <!-- Popper JS -->
+  <script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+
+  <!-- <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script> -->
+</body>
+
+</html>
